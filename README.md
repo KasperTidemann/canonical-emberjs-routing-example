@@ -18,3 +18,5 @@ Sincerely,
 Kasper Tidemann
 
 ![Kasper Tidemann](http://www.tidemannogco.dk/meemo/KasperTidemann-Signature.jpg)
+
+(This is a copy of the blog post titled ["Canonical Ember.js routing example"](http://www.kaspertidemann.com/examples/canonical-emberjs-routing-example/CanonicalRoutingExampleUsingEmberJS.zip "\"Canonical Ember.js routing example\"").)

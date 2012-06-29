@@ -1,0 +1,29 @@
+/* Canonical routing example using Ember.js - and the somewhat boring CSS that belongs to it: */
+
+* { margin: 0px; padding: 0px; }
+
+body, html { width: 100%; background: url(../graphics/Tile.jpg); font-family: 'Doppio One', sans-serif; }
+
+p { color: #cc3399; text-shadow: 1px 1px #ffffff; text-align: center; }
+
+#content { width: 273px; height: auto; margin: 25% auto; }
+
+div.logo { width: 103px; height: 40px; margin: 0px auto 20px auto; clear: both; cursor: pointer; }
+
+div.tabs { width: 273px; height: 28px; clear: both; }
+	div.tab1 { background: url(../graphics/TabsCanonical.png); }
+	div.tab1 p.tab1 { color: #ffffff; text-shadow: 1px 1px #333333; }
+	div.tab2 { background: url(../graphics/TabsRouting.png); }
+	div.tab2 p.tab2 { color: #ffffff; text-shadow: 1px 1px #333333; }
+	div.tab3 { background: url(../graphics/TabsExample.png); }
+	div.tab3 p.tab3 { color: #ffffff; text-shadow: 1px 1px #333333; }
+div.tabs div { width: 91px; height: 28px; float: left; cursor: pointer; }
+div.tabs div p { font-size: 12px; line-height: 26px; font-weight: bold; }
+
+div.content { width: 271px; height: 83px; margin: 20px 1px 20px 1px; background: url(../graphics/Content.png); }
+div.content p { color: #000000; font-size: 14px; line-height: 18px; padding: 15px 0px 0px 0px; }
+
+div.slider { width: 271px; height: 18px; margin: 10px 1px 10px 1px; position: relative; background: none; }
+div.slider div.background { width: 271px; height: 6px; position: absolute; top: 6px; left: 0px; z-index: 1; background: url(../graphics/SliderBackground.png); }
+div.slider div.foreground { height: 6px; position: absolute; top: 0px; left: 0px; z-index: 2; background: url(../graphics/SliderForeground.png); }
+div.slider div.handle { width: 16px; height: 18px; position: absolute; top: -6px; left: 0px; z-index: 3; background: url(../graphics/SliderHandle.png); }

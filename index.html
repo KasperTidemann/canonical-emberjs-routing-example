@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Canonical routing example using Ember.js</title>
+  
+  <script type='text/javascript' src='js/jquery.js'></script>
+	<script type='text/javascript' src="js/ember.js"></script>
+	<script type='text/javascript' src="js/app.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
+
+  <meta name="viewport" content="width=device-width, target-densitydpi=device-dpi" />
+
+</head>
+<body>
+
+  <script type="text/x-handlebars" data-template-name="application">
+
+    <div id="content">
+
+      {{view App.LogoView}}      
+
+      {{view App.TabView}}
+
+      {{view App.SliderView}}
+
+      {{outlet}}
+
+    </div>
+
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="logo">
+    <img src="graphics/Logo.png" width="103" height="40" alt="Ember" title="Ember" border="0" {{action goToTab1}} />
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="tab">
+
+    <div {{action goToTab1}}><p class="tab1">Canonical</p></div>
+    <div {{action goToTab2}}><p class="tab2">routing</p></div>
+    <div {{action goToTab3}}><p class="tab3">example!</p></div>    
+
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="slider">
+    <div class="background">
+      <div class="foreground" style="width: 0px;"></div>
+      <div class="handle"></div>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="tab1">
+    <p>Content for Tab 1 goes here.</p>
+    <p>Be sure to check out <a href="http://www.emberjs.com/">emberjs.com</a>.</p>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="tab2">
+    <p>Content for Tab 2 goes here.</p>
+    <p>... and the ember.js <a href="https://github.com/emberjs/ember.js">GitHub page</a>.</p>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="tab3">
+    <p>Content for Tab 3 goes here.</p>
+    <p>Oh, and #emberjs on <a href="irc://irc.freenode.org">irc.freenode.org</a>!</p>
+  </script>
+
+</body>
+</html>

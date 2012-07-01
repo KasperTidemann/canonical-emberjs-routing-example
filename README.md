@@ -10,7 +10,7 @@ First of all, I have put up [a live version of the example code here](http://www
 
 Now, the example consists of an `index.html` file containing trivial HTML plus the Handlebars templates used. All JavaScript files reside in the `js/` folder. Finally, for the CoffeeScript lovers, there is an `app.coffee` file in the `src/` folder.
 
-Should you wish to download the example files, I have [a ZIP file available right here](http://www.kaspertidemann.com/examples/canonical-emberjs-routing-example/CanonicalRoutingExampleUsingEmberJS.zip "a ZIP file available right here"). There is also a [GitHub repository containing the project](https://github.com/KasperTidemann/canonical-emberjs-routing-example "GitHub repository containing the project").
+Should you wish to download the example files, I have [a ZIP file available right here](http://www.kaspertidemann.com/examples/canonical-emberjs-routing-example/CanonicalEmberJSRoutingExample.zip "a ZIP file available right here"). There is also a [GitHub repository containing the project](https://github.com/KasperTidemann/canonical-emberjs-routing-example "GitHub repository containing the project").
 
 I did my best to comment everything, including the use of `Em.run.next()` for making the effects work on the initial load. If you have any questions, please let me know or join us at `#emberjs` on [irc.freenode.org](irc://irc.freenode.org "irc.freenode.org"). Enjoy!
 

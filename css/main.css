@@ -6,7 +6,7 @@ body, html { width: 100%; background: url(../graphics/Tile.jpg); font-family: 'D
 
 p { color: #cc3399; text-shadow: 1px 1px #ffffff; text-align: center; }
 
-#content { width: 273px; height: auto; margin: 25% auto; }
+#content { width: 273px; height: 219px; position: absolute; left: 50%; top: 50%; margin: -109px 0px 0px -136px; }
 
 div.logo { width: 103px; height: 40px; margin: 0px auto 20px auto; clear: both; cursor: pointer; }
 

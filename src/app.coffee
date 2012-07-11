@@ -10,26 +10,20 @@ $ ->
 	App.ApplicationView = Em.View.extend
 		templateName: 'application'
 
-	# Create the logo controller alongside the logo view for showing the
-	# Ember logo in the example:
+	# Create the logo view for showing the Ember logo in the example:
 
-	App.LogoController = Em.Controller.extend()
 	App.LogoView = Em.View.extend
 		templateName: 'logo'
 		classNames: ['logo']
 
-	# Create the tab controller alongside the tab view for showing the three
-	# tabs in the example:
+	# Create the tab view for showing the three tabs in the example:
 
-	App.TabController = Em.Controller.extend()
 	App.TabView = Em.View.extend
 		templateName: 'tab'
 		classNames: ['tabs']
 
-	# Create the slider controller alongside the slider view for showing the
-	# slider below the tabs:
+	# Create the slider view for showing the slider below the tabs:
 
-	App.SliderController = Em.Controller.extend()
 	App.SliderView = Em.View.extend
 		templateName: 'slider'
 		classNames: ['slider']

@@ -6,7 +6,7 @@ This aptly named canonical routing example is designed to give you a simple, str
 
 I have put up a [live version of the example code](http://www.kaspertidemann.com/examples/canonical-emberjs-routing-example-part-2 "live version of the example code"). If you want to download it, a ZIP file is provided [right here](http://www.kaspertidemann.com/examples/canonical-emberjs-routing-example-part-2/CanonicalEmberJSRoutingExamplePart2.zip "right here"). As usual, [the GitHub repository](https://github.com/KasperTidemann/canonical-emberjs-routing-example "the GitHub repository") is available as well.
 
-I sincerely hope you find this example useful. If at any time you need help getting started using Ember.js, just write me on twitter at <a href="https://twitter.com/KasperTidemann" title="KasperTidemann on twitter">@KasperTidemann</a> and I'll get back to you.
+I sincerely hope you find this example useful. If at any time you need help getting started using Ember.js, just write me and I'll get back to you.
 
 Sincerely,  
 Kasper Tidemann

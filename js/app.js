@@ -47,6 +47,9 @@ App.TabView = Em.View.extend({
         'left': left
       }, 1000);
     });
+  },
+  didInsertElement: function() {
+    return this.animateTab(this.get('templateName'));
   }
 });
 
@@ -57,26 +60,17 @@ App.SliderView = Em.View.extend({
 
 App.Tab1View = App.TabView.extend({
   templateName: 'tab1',
-  classNames: ['content'],
-  didInsertElement: function() {
-    return this.animateTab('tab1');
-  }
+  classNames: ['content']
 });
 
 App.Tab2View = App.TabView.extend({
   templateName: 'tab2',
-  classNames: ['content'],
-  didInsertElement: function() {
-    return this.animateTab('tab2');
-  }
+  classNames: ['content']
 });
 
 App.Tab3View = App.TabView.extend({
   templateName: 'tab3',
-  classNames: ['content'],
-  didInsertElement: function() {
-    return this.animateTab('tab3');
-  }
+  classNames: ['content']
 });
 
 App.Router.map(function() {

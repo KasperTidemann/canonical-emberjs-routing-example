@@ -4,14 +4,50 @@ App = Em.Application.create({
   LOG_TRANSITIONS: true
 });
 
+App.Tab2Controller = Em.Controller.extend({
+  randomNumber: null
+});
+
 App.LogoView = Em.View.extend({
   templateName: 'logo',
   classNames: ['logo']
 });
 
-App.TabView = Em.View.extend({
-  templateName: 'tab',
+App.TabsView = Em.View.extend({
+  templateName: 'tabs',
   classNames: ['tabs']
+});
+
+App.TabView = Em.View.extend({
+  tabPositions: {
+    tab1: {
+      width: '90px',
+      left: '82px'
+    },
+    tab2: {
+      width: '180px',
+      left: '172px'
+    },
+    tab3: {
+      width: '271px',
+      left: '263px'
+    }
+  },
+  animateTab: function(tab) {
+    var left, width;
+    width = this.get('tabPositions.' + tab + '.width');
+    left = this.get('tabPositions.' + tab + '.left');
+    return Em.run.next(function() {
+      $('div.tabs').removeClass('tab1 tab2 tab3');
+      $('div.tabs').addClass(tab);
+      $('div.slider div.foreground').stop().animate({
+        'width': width
+      }, 1000);
+      return $('div.slider div.handle').stop().animate({
+        'left': left
+      }, 1000);
+    });
+  }
 });
 
 App.SliderView = Em.View.extend({
@@ -19,19 +55,28 @@ App.SliderView = Em.View.extend({
   classNames: ['slider']
 });
 
-App.Tab1View = Em.View.extend({
+App.Tab1View = App.TabView.extend({
   templateName: 'tab1',
-  classNames: ['content']
+  classNames: ['content'],
+  didInsertElement: function() {
+    return this.animateTab('tab1');
+  }
 });
 
-App.Tab2View = Em.View.extend({
+App.Tab2View = App.TabView.extend({
   templateName: 'tab2',
-  classNames: ['content']
+  classNames: ['content'],
+  didInsertElement: function() {
+    return this.animateTab('tab2');
+  }
 });
 
-App.Tab3View = Em.View.extend({
+App.Tab3View = App.TabView.extend({
   templateName: 'tab3',
-  classNames: ['content']
+  classNames: ['content'],
+  didInsertElement: function() {
+    return this.animateTab('tab3');
+  }
 });
 
 App.Router.map(function() {
@@ -60,53 +105,9 @@ App.IndexRoute = Em.Route.extend({
   }
 });
 
-App.Tab1Route = Em.Route.extend({
-  enter: function() {
-    return Em.run.next(function() {
-      $('div.tabs').addClass('tab1');
-      $('div.slider div.foreground').stop().animate({
-        'width': '90px'
-      }, 1000);
-      return $('div.slider div.handle').stop().animate({
-        'left': '82px'
-      }, 1000);
-    });
-  },
-  exit: function() {
-    return $('div.tabs').removeClass('tab1');
-  }
-});
-
 App.Tab2Route = Em.Route.extend({
-  enter: function() {
-    return Em.run.next(function() {
-      $('div.tabs').addClass('tab2');
-      $('div.slider div.foreground').stop().animate({
-        'width': '180px'
-      }, 1000);
-      return $('div.slider div.handle').stop().animate({
-        'left': '172px'
-      }, 1000);
-    });
-  },
-  exit: function() {
-    return $('div.tabs').removeClass('tab2');
-  }
-});
-
-App.Tab3Route = Em.Route.extend({
-  enter: function() {
-    return Em.run.next(function() {
-      $('div.tabs').addClass('tab3');
-      $('div.slider div.foreground').stop().animate({
-        'width': '271px'
-      }, 1000);
-      return $('div.slider div.handle').stop().animate({
-        'left': '263px'
-      }, 1000);
-    });
-  },
-  exit: function() {
-    return $('div.tabs').removeClass('tab3');
+  renderTemplate: function(controller) {
+    this.render('tab2');
+    return controller.set('randomNumber', Math.round(10 * Math.random()));
   }
 });

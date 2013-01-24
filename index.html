@@ -23,7 +23,7 @@
 
       {{view App.LogoView}}
 
-      {{view App.TabView}}
+      {{view App.TabsView}}
 
       {{view App.SliderView}}
 
@@ -37,7 +37,7 @@
     <img src="graphics/Logo.png" width="103" height="40" alt="Ember" title="Ember" border="0" {{action goToTab1}} />
   </script>
 
-  <script type="text/x-handlebars" data-template-name="tab">
+  <script type="text/x-handlebars" data-template-name="tabs">
 
     <div {{action goToTab1}}><p class="tab1">Canonical</p></div>
     <div {{action goToTab2}}><p class="tab2">routing</p></div>
@@ -58,7 +58,7 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="tab2">
-    <p>Content for Tab 2 goes here.</p>
+    <p>Random content for Tab 2: {{view.controller.randomNumber}}</p>
     <p>... and the ember.js <a href="https://github.com/emberjs/ember.js">GitHub page</a>.</p>
   </script>
 

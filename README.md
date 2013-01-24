@@ -1,22 +1,16 @@
-# Canonical Ember.js routing example
+## Canonical Ember.js routing example
 
--------------------------
+Around 5 months ago, I released [my first example](http://www.kaspertidemann.com/canonical-emberjs-routing-example/ "my first example") of how to use routing in Ember.js. Since then, lots of things have changed in the framework, all for the better in order to create more concise, clear code. For the same reason, my routing example needed a proper update.
 
-Ember.js is on the rise with more and more people embracing the framework for creating client-side web applications. The community is focusing heavily on the development these days, making changes and commits on an hourly basis.
+This aptly named canonical routing example is designed to give you a simple, straight-forward idea of how Ember.js works with routes, controllers, and views. The example illustrates the power of the automagic contained in Ember.js - hence the lack of an `App.Tab1Route` and `App.Tab3Route` because these get created for you automatically - as well as handling events on routes, extending views for DRY and readable code etc.
 
-A couple of days ago, routing was moved out of `Ember.State` and into `Ember.Route`, paving the way for new routing examples based on the latest conventions. Alas, I bring you my canonical routing example using Ember.js:
+I have put up a [live version of the example code](http://www.kaspertidemann.com/examples/canonical-emberjs-routing-example-part-2 "live version of the example code"). If you want to download it, a ZIP file is provided [right here](http://www.kaspertidemann.com/examples/canonical-emberjs-routing-example-part-2/CanonicalEmberJSRoutingExamplePart2.zip "right here"). As usual, [the GitHub repository](https://github.com/KasperTidemann/canonical-emberjs-routing-example "the GitHub repository") is available as well.
 
-First of all, I have put up [a live version of the example code here](http://www.kaspertidemann.com/examples/canonical-emberjs-routing-example/ "a live version of the example code here").
-
-Now, the example consists of an `index.html` file containing trivial HTML plus the Handlebars templates used. All JavaScript files reside in the `js/` folder. Finally, for the CoffeeScript lovers, there is an `app.coffee` file in the `src/` folder.
-
-Should you wish to download the example files, I have [a ZIP file available right here](http://www.kaspertidemann.com/examples/canonical-emberjs-routing-example/CanonicalEmberJSRoutingExample.zip "a ZIP file available right here"). There is also a [GitHub repository containing the project](https://github.com/KasperTidemann/canonical-emberjs-routing-example "GitHub repository containing the project").
-
-I did my best to comment everything, including the use of `Em.run.next()` for making the effects work on the initial load. If you have any questions, please let me know or join us at `#emberjs` on [irc.freenode.org](irc://irc.freenode.org "irc.freenode.org"). Enjoy!
+I sincerely hope you find this example useful. If at any time you need help getting started using Ember.js, just write me on twitter at <a href="https://twitter.com/KasperTidemann" title="KasperTidemann on twitter">@KasperTidemann</a> and I'll get back to you.
 
 Sincerely,  
 Kasper Tidemann
 
 ![Kasper Tidemann](http://www.tidemannogco.dk/meemo/KasperTidemann-Signature.jpg)
 
-(This is a copy of the blog post titled ["Canonical Ember.js routing example"](http://www.kaspertidemann.com/canonical-emberjs-routing-example/ ""Canonical Ember.js routing example"") on kaspertidemann.com.)
+(This is a copy of the blog post titled ["Canonical Ember.js routing example, part 2"](http://www.kaspertidemann.com/canonical-emberjs-routing-example-part-2/ ""Canonical Ember.js routing example, part 2"") on kaspertidemann.com.)

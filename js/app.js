@@ -19,6 +19,7 @@ App.TabsView = Em.View.extend({
 });
 
 App.TabView = Em.View.extend({
+  classNames: ['content'],
   tabPositions: {
     tab1: {
       width: '90px',
@@ -33,8 +34,9 @@ App.TabView = Em.View.extend({
       left: '263px'
     }
   },
-  animateTab: function(tab) {
-    var left, width;
+  animateTab: function() {
+    var left, tab, width;
+    tab = this.get('templateName');
     width = this.get('tabPositions.' + tab + '.width');
     left = this.get('tabPositions.' + tab + '.left');
     return Em.run.next(function() {
@@ -47,6 +49,9 @@ App.TabView = Em.View.extend({
         'left': left
       }, 1000);
     });
+  },
+  didInsertElement: function() {
+    return this.animateTab();
   }
 });
 
@@ -56,27 +61,15 @@ App.SliderView = Em.View.extend({
 });
 
 App.Tab1View = App.TabView.extend({
-  templateName: 'tab1',
-  classNames: ['content'],
-  didInsertElement: function() {
-    return this.animateTab('tab1');
-  }
+  templateName: 'tab1'
 });
 
 App.Tab2View = App.TabView.extend({
-  templateName: 'tab2',
-  classNames: ['content'],
-  didInsertElement: function() {
-    return this.animateTab('tab2');
-  }
+  templateName: 'tab2'
 });
 
 App.Tab3View = App.TabView.extend({
-  templateName: 'tab3',
-  classNames: ['content'],
-  didInsertElement: function() {
-    return this.animateTab('tab3');
-  }
+  templateName: 'tab3'
 });
 
 App.Router.map(function() {

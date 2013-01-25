@@ -15,6 +15,8 @@ App.TabsView = Em.View.extend
 	classNames: ['tabs']
 
 App.TabView = Em.View.extend
+	classNames: ['content']
+
 	tabPositions:
 		tab1:
 			width: '90px'
@@ -26,7 +28,8 @@ App.TabView = Em.View.extend
 			width: '271px'
 			left: '263px'
 
-	animateTab: (tab) ->
+	animateTab: ->
+		tab = @get('templateName')
 		width = @get('tabPositions.' + tab + '.width')
 		left = @get('tabPositions.' + tab + '.left')
 
@@ -36,30 +39,21 @@ App.TabView = Em.View.extend
 			$('div.slider div.foreground').stop().animate { 'width': width }, 1000
 			$('div.slider div.handle').stop().animate { 'left': left }, 1000
 
+	didInsertElement: ->
+		@animateTab()
+
 App.SliderView = Em.View.extend
 	templateName: 'slider'
 	classNames: ['slider']
 
 App.Tab1View = App.TabView.extend
-	templateName: 'tab1'
-	classNames: ['content']
-
-	didInsertElement: ->
-		@animateTab 'tab1'
+	templateName: 'tab1'		
 
 App.Tab2View = App.TabView.extend
 	templateName: 'tab2'
-	classNames: ['content']
-
-	didInsertElement: ->
-		@animateTab 'tab2'
 
 App.Tab3View = App.TabView.extend
 	templateName: 'tab3'
-	classNames: ['content']
-
-	didInsertElement: ->
-		@animateTab 'tab3'
 
 # Router:
 App.Router.map ->

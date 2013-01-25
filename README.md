@@ -13,4 +13,4 @@ Kasper Tidemann
 
 ![Kasper Tidemann](http://www.tidemannogco.dk/meemo/KasperTidemann-Signature.jpg)
 
-(This is a copy of the blog post titled ["Canonical Ember.js routing example, part 2"](http://www.kaspertidemann.com/canonical-emberjs-routing-example-part-2/ ""Canonical Ember.js routing example, part 2"") on kaspertidemann.com.)
+(This is a copy of the blog post titled ["Canonical Ember.js routing example, part 2"](http://www.kaspertidemann.com/canonical-ember-js-routing-example-part-2/ ""Canonical Ember.js routing example, part 2"") on kaspertidemann.com.)

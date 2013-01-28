@@ -73,7 +73,8 @@ App.Tab3View = App.TabView.extend({
 });
 
 App.Router.map(function() {
-  this.route('index', this.route('tab1'));
+  this.route('index');
+  this.route('tab1');
   this.route('tab2');
   this.route('tab3');
 });
